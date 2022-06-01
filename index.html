@@ -1,0 +1,206 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+</head>
+<body  style="background-color: #6A6E64; min-height:100vh;">
+
+    <main>
+        <!--Menu-->
+        <div style="padding-top:5px;">
+            <div style="display:flex;">
+                <div style="font-weight:700; padding-left:10px;">
+                    <div style="color: #F1E3C8; font-size:24px;">
+                        Practical 2
+                    </div>
+                    <div style="color:white; width:220px; font-size:16px;">
+                        Provide Sensor Information on a Dashboard
+                    </div>
+                </div>
+                <div style="flex:1;"></div>
+                <div style="display: flex; color: #989E90; font-weight:600;">
+                    <style>
+                        .hd {
+                            padding: 10px;
+                            padding-left: 30px;
+                            padding-right: 30px;
+                            cursor: pointer;
+                        }
+                            .hd:hover {
+                                color: #F1E3C8;
+                            }
+                    </style>
+                    <div class="hd" onclick="view('home')">
+                         Home 
+                    </div>
+                    <div class="hd" onclick="view('sensor1')">
+                         Sensor 1
+                    </div>
+                    <div class="hd" onclick="view('sensor2')">
+                         Sensor 2
+                    </div>
+                    <div class="hd" onclick="view('sensor3')">
+                         Sensor 3 
+                    </div>
+                    <div class="hd" onclick="view('sensor4')">
+                         Sensor 4 
+                    </div>
+                    <div class="hd" onclick="view('sensor4')">
+                         Notifications  
+                    </div>
+                    <div style="width:60px;"></div>
+                </div>
+            </div>
+        </div>
+        <!--Pages-->
+        <div style="padding-bottom:60vh;">
+            <style>
+                .tb{
+                    display:none;
+                } 
+            </style>
+            <div class="tb home" style="padding-top:20px; padding-bottom:60vh;">
+                
+                <div style="width: 90%; position:relative; margin: auto; min-height: 100vh; background: url(assets/img/img.jpeg) ; background-repeat: no-repeat; background-size:cover;">
+                    <style>
+                        .bt2 {
+                            position: absolute; 
+                            background-color: #393D32;
+                            border: solid #C74300 2px;
+                            border-radius: 30px;
+                            padding: 4px;
+                            color: #C74300;
+                            cursor:pointer;
+                        }
+                            .bt2:hover {
+                                color: white;
+                                background-color: #C74300;
+                            }
+                    </style>
+
+                    <div class="bt2" style="top: 60%; left: 7.5%;"  onclick="view('sensor1')" >
+                        Sensor 1
+                    </div>
+                    <div class="bt2" style="top: 50%; left: 20%;"  onclick="view('sensor2')">
+                        Sensor 2
+                    </div>
+                    <div class="bt2" style="top: 70%; left: 50%;"  onclick="view('sensor3')">
+                        Sensor 3
+                    </div>
+                    <div class="bt2"  style="top: 55%; left: 80%;"  onclick="view('sensor4')">
+                        Sensor 4
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="tb sensor1" >
+                
+                <div style="color: #F1E3C8; text-align:center; font-weight:900; font-size:30px; margin-top:40px;">
+                    Temperature
+                </div>
+                <div style="width:450px; margin:auto; margin-top:20px;">
+                    <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1708546/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
+                </div>
+                <div style="color: #F1E3C8; text-align:center; font-weight:900; font-size:30px; margin-top:40px;">
+                    Humidity 
+                </div>
+                <div style="width:450px; margin:auto; margin-top:20px;">
+                    <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1708546/charts/2?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
+                </div>
+
+            </div>
+            <div class="tb sensor2" >
+
+                <div style="color: #F1E3C8; text-align:center; font-weight:900; font-size:30px; margin-top:40px;">
+                    Temperature
+                </div>
+                <div style="width:450px; margin:auto; margin-top:20px;">
+                    <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1737929/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
+                </div>
+                <div style="color: #F1E3C8; text-align:center; font-weight:900; font-size:30px; margin-top:40px;">
+                    Humidity
+                </div>
+                <div style="width:450px; margin:auto; margin-top:20px;">
+                    <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1737929/charts/2?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
+                </div>
+
+            </div>
+            <div class="tb sensor3">
+
+                <div style="color: #F1E3C8; text-align:center; font-weight:900; font-size:30px; margin-top:40px;">
+                    Temperature
+                </div>
+                <div style="width:450px; margin:auto; margin-top:20px;">
+                    <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1738066/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe> 
+                </div>
+                <div style="color: #F1E3C8; text-align:center; font-weight:900; font-size:30px; margin-top:40px;">
+                    Humidity
+                </div>
+                <div style="width:450px; margin:auto; margin-top:20px;">
+                    <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1738066/charts/2?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
+                </div>
+
+            </div>
+            <div class="tb sensor4" >
+
+                <div style="color: #F1E3C8; text-align:center; font-weight:900; font-size:30px; margin-top:40px;">
+                    Temperature
+                </div>
+                <div style="width:450px; margin:auto; margin-top:20px;">
+                    <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1738082/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
+                </div>
+                <div style="color: #F1E3C8; text-align:center; font-weight:900; font-size:30px; margin-top:40px;">
+                    Humidity
+                </div>
+                <div style="width:450px; margin:auto; margin-top:20px;">
+                    <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1738082/charts/2?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
+                </div>
+
+            </div>
+            <div class="tb notif" style="display: block;">
+                
+                <div style="width:400px; margin:auto; margin-top:30px;">
+                    <div style="color: #F1E3C8; padding-top:5px; padding-bottom:5px; ">
+                        Email Address
+                    </div>
+                    <div style="display:flex;">
+                        <div>
+                            <input type="email" style="width:180px" />
+                        </div>
+                        <div style="margin-left:10px;">
+                            <button> ADD </button>
+                        </div>
+                        <div style="margin-left:10px;">
+                            <button> NOTIFY </button>
+                        </div>
+                    </div>
+                    <style>
+                        .eml {
+                            padding-bottom: 5px;
+                        }
+                    </style>
+                    <div style="margin-top: 20px; color: #F1E3C8; padding:10px; border-left: solid #F1E3C8 1px; border-top: solid #F1E3C8 1px; ">
+                        <div class="eml"> suknandan.m@gmail.com </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <script>
+                function view(tb) {
+                    $(".tb").css("display", "none");
+                    $("."+tb).css("display", "block");
+                }
+            </script>
+        </div>
+    </main>
+
+
+
+</body>
+</html>

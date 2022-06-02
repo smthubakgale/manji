@@ -59,47 +59,48 @@
         <!--Pages-->
         <div style="padding-bottom:60vh;">
             <style>
-                .tb{
-                    display:none;
-                } 
+                .tb {
+                    display: none;
+                }
             </style>
             <div class="tb home" style="padding-top:20px; padding-bottom:60vh;">
-                
+
                 <div style="width: 90%; position:relative; margin: auto; min-height: 100vh; background: url(assets/img/img.jpeg) ; background-repeat: no-repeat; background-size:cover;">
                     <style>
                         .bt2 {
-                            position: absolute; 
+                            position: absolute;
                             background-color: #393D32;
                             border: solid #C74300 2px;
                             border-radius: 30px;
                             padding: 4px;
                             color: #C74300;
-                            cursor:pointer;
+                            cursor: pointer;
                         }
+
                             .bt2:hover {
                                 color: white;
                                 background-color: #C74300;
                             }
                     </style>
 
-                    <div class="bt2" style="top: 60%; left: 7.5%;"  onclick="view('sensor1')" >
+                    <div class="bt2" style="top: 60%; left: 7.5%;" onclick="view('sensor1')">
                         Sensor 1
                     </div>
-                    <div class="bt2" style="top: 50%; left: 20%;"  onclick="view('sensor2')">
+                    <div class="bt2" style="top: 50%; left: 20%;" onclick="view('sensor2')">
                         Sensor 2
                     </div>
-                    <div class="bt2" style="top: 70%; left: 50%;"  onclick="view('sensor3')">
+                    <div class="bt2" style="top: 70%; left: 50%;" onclick="view('sensor3')">
                         Sensor 3
                     </div>
-                    <div class="bt2"  style="top: 55%; left: 80%;"  onclick="view('sensor4')">
+                    <div class="bt2" style="top: 55%; left: 80%;" onclick="view('sensor4')">
                         Sensor 4
                     </div>
 
                 </div>
 
             </div>
-            <div class="tb sensor1" >
-                
+            <div class="tb sensor1">
+
                 <div style="color: #F1E3C8; text-align:center; font-weight:900; font-size:30px; margin-top:40px;">
                     Temperature
                 </div>
@@ -107,14 +108,14 @@
                     <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1708546/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
                 </div>
                 <div style="color: #F1E3C8; text-align:center; font-weight:900; font-size:30px; margin-top:40px;">
-                    Humidity 
+                    Humidity
                 </div>
                 <div style="width:450px; margin:auto; margin-top:20px;">
                     <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1708546/charts/2?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
                 </div>
 
             </div>
-            <div class="tb sensor2" >
+            <div class="tb sensor2">
 
                 <div style="color: #F1E3C8; text-align:center; font-weight:900; font-size:30px; margin-top:40px;">
                     Temperature
@@ -136,7 +137,7 @@
                     Temperature
                 </div>
                 <div style="width:450px; margin:auto; margin-top:20px;">
-                    <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1738066/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe> 
+                    <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1738066/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
                 </div>
                 <div style="color: #F1E3C8; text-align:center; font-weight:900; font-size:30px; margin-top:40px;">
                     Humidity
@@ -146,7 +147,7 @@
                 </div>
 
             </div>
-            <div class="tb sensor4" >
+            <div class="tb sensor4">
 
                 <div style="color: #F1E3C8; text-align:center; font-weight:900; font-size:30px; margin-top:40px;">
                     Temperature
@@ -163,20 +164,42 @@
 
             </div>
             <div class="tb notif" style="display: block;">
-                
+
                 <div style="width:400px; margin:auto; margin-top:30px;">
-                    <div style="color: #F1E3C8; padding-top:5px; padding-bottom:5px; ">
-                        Email Address
-                    </div>
-                    <div style="display:flex;">
-                        <div>
-                            <input type="email" style="width:180px" />
+                    <div style="flex:1;  font-weight:bold;">
+                        <div style="display: flex; color: #F1E3C8; padding-bottom: 5px;">
+                            <div style="flex:1;"> Sensor </div>
+                            <div style="flex:1;"> Temp </div>
+                            <div style="flex:1;"> Humidity </div>
                         </div>
-                        <div style="margin-left:10px;">
-                            <button> ADD </button>
-                        </div>
-                        <div style="margin-left:10px;">
-                            <button> NOTIFY </button>
+                        <div style="display: flex;">
+                            <div style="width: 80px; color: #F6FFFF">
+                                <div> Sensor 2 </div>
+                                <div> Sensor 3 </div>
+                                <div> Sensor 4 </div>
+                            </div>
+                            <div style="flex:1;">
+                                <div>
+                                    <input id="s2_t" type="number" value="7600" style="width:60px; text-align:center;" />
+                                </div>
+                                <div>
+                                    <input id="s3_t" type="number" value="40" style="width:60px; text-align:center;" />
+                                </div>
+                                <div>
+                                    <input id="s4_t" type="number" value="40" style="width: 60px; text-align: center;" />
+                                </div>
+                            </div>
+                            <div style="flex:1;">
+                                <div>
+                                    <input id="s2_h" type="number" value="40" style="width: 60px; text-align: center;" />
+                                </div>
+                                <div>
+                                    <input id="s3_h" type="number" value="40" style="width: 60px; text-align: center;" />
+                                </div>
+                                <div>
+                                    <input id="s4_h" type="number" value="40" style="width: 60px; text-align: center;" />
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <style>
@@ -184,17 +207,78 @@
                             padding-bottom: 5px;
                         }
                     </style>
-                    <div style="margin-top: 20px; color: #F1E3C8; padding:10px; border-left: solid #F1E3C8 1px; border-top: solid #F1E3C8 1px; ">
-                        <div class="eml"> suknandan.m@gmail.com </div>
+                    <div class="notifs" style="margin-top: 20px; color: #F1E3C8; padding:10px; border-left: solid #F1E3C8 1px; border-top: solid #F1E3C8 1px; ">
+                        <div>
+                            <div class="eml a"> </div>
+                        </div>
                     </div>
                 </div>
 
 
             </div>
+
+            <script>
+                $(window).on("load", function () {
+                    setInterval(function () {
+                        thresholds()
+                    }, 8000)
+                });
+                function thresholds() {
+
+                    var sen = ["Sensor 2", "Sensor 3", "Sensor 4"];
+                    var tp = ["temperature", "humidity"];
+
+                    var thres = [
+                        [$("#s2_t").val(), $("#s2_h").val()],
+                        [$("#s3_t").val(), $("#s3_h").val()],
+                        [$("#s4_t").val(), $("#s4_h").val()]
+                    ];
+
+                    var urlsA = [
+                        ["https://api.thingspeak.com/update?api_key=VXCEWEVQJ3D71HJ9&field1=", "https://api.thingspeak.com/update?api_key=VXCEWEVQJ3D71HJ9&field2="],
+                        ["https://api.thingspeak.com/update?api_key=ZTM68ENLVH19HYNM&field1=", "https://api.thingspeak.com/update?api_key=ZTM68ENLVH19HYNM&field2="],
+                        ["https://api.thingspeak.com/update?api_key=VBBMSWC6IOVYHBMI&field1=", "https://api.thingspeak.com/update?api_key=VBBMSWC6IOVYHBMI&field2="]
+                    ];
+
+                    var g = $(".notifs").children().first();
+                    var str = "";
+
+                    for (var k = 0; k < 3; k++) {
+                        for (var i = 0; i < 2; i++) {
+
+                            var item = urlsA[k][i] + thres[k][i];
+
+                            $.ajax({
+                                async: false,
+                                type: "GET",
+                                url: item,
+                                contentType: "application/json;",
+                                success: function (resp) {
+                                    var val = parseInt(resp + "");
+                                    var thr = parseInt(thres[k][i] + "");
+
+                                    if (val > thr) {
+                                        var d = val - thr;
+                                        var s = sen[k] + " " + tp[i] + " is over the threshold at " + val + " by " + d;
+                                        var f = g.clone();
+                                        f.find(".a").html(s);
+                                        str += $("<div/>").html(f).html();
+                                    }
+                                },
+                                error: function (response) {
+                                    //alert("error");
+                                }
+                            });
+                        }
+                    }
+
+                    $(".notifs").html(str);
+                }
+            </script>
             <script>
                 function view(tb) {
                     $(".tb").css("display", "none");
-                    $("."+tb).css("display", "block");
+                    $("." + tb).css("display", "block");
                 }
             </script>
         </div>
